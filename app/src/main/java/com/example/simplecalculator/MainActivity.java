@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
     Button button_dot;
     Button button_0;
     Button button_equal;
-    double num1 = 0, num2 = 0;
+    double num1 = 0;
+    double num2 = 0;
     double result = 0;
     Boolean isClick = false;
     String operation = "$";
@@ -242,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
                     text_display.setText("");
                     isClick = false;
                 }
-                text_display.setText(text_display.getText().toString() + "0");
+                text_display.setText(String.format("%s0", text_display.getText().toString()));
             }
 
         });
